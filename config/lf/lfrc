@@ -1,0 +1,78 @@
+# === SHELL DEFAULT (WAJIB UNTUK TERMUX) ===
+set shell /data/data/com.termux/files/usr/bin/zsh
+
+# === TAMPILAN DAN BEHAVIOR DASAR ===
+set hidden
+set icons
+set smartcase
+set scrolloff 5
+set preview
+set drawbox
+set wrapscan
+set relativenumber
+set sixel
+
+# === EDIT FILE DENGAN NEOVIM ===
+map i $nvim $f
+map n $nvim
+
+# === NAVIGASI GAYA NEOVIM ===
+map h cd ..
+map l open
+map j down
+map k up
+map gg top
+map G bottom
+map H set hidden!
+
+# === PENANDA & MULTI-SELEKSI ===
+map <space> toggle
+map V       invert
+map u       unselect
+
+# === COPY, CUT, PASTE ===
+map y copy
+map c cut
+map p paste
+
+# === DELETE FILE / FOLDER ===
+cmd delete-file ${{
+  rm -ir "$fx"
+}}
+map x delete-file
+map d delete-file
+
+# === BUAT FILE & FOLDER ===
+map a $touch newfile.txt
+map A $mkdir newfolder
+map m mkdir
+map r rename
+
+# === PANEL / QUIT / REFRESH ===
+map q quit
+map R reload
+
+# === BANTUAN / DAFTAR NAVIGASI (TOMBOL '?') ===
+cmd show-help ${{
+  printf "📜 Shortcuts (LF):\n
+Navigasi:
+  h/l/j/k   : kiri, buka, bawah, atas
+  gg / G    : ke atas / bawah
+  H         : toggle hidden
+
+File:
+  i / n     : edit di Neovim
+  y / c / p : copy, cut, paste
+  x / d     : hapus file/folder
+  a / A     : buat file / folder
+  r         : rename file
+  ggVGd     : hapus semua di Neovim
+  ESC :wq   : simpan dan keluar di Neovim
+
+Lainnya:
+  q / R     : keluar / reload\n" | less
+}}
+map ? show-help
+
+# === LAINNYA ===
+map . set hidden!
