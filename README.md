@@ -1,90 +1,77 @@
-<h1 align="center">🗂️ CodX-lf</h1>
+---
 
-<p align="center">
-  🔥 File Manager LF Custom with Neovim-Like Navigation and Terminal Magic
-</p>
+<h1 align="center">CodX-lf</h1>📁 Konfigurasi lf (terminal file manager) yang dioptimalkan untuk efisiensi, dengan navigasi layaknya Neovim (LazyVim).
+Dirancang khusus untuk pengguna Termux agar nyaman, cepat, dan powerful.
+
 
 ---
 
-## ✨ Fitur Utama
+⚙️ Instalasi Manual
 
-- 🧭 **Navigasi Seperti Neovim** (`h/j/k/l`, `gg`, `G`, dll)
-- 📝 **Edit File Otomatis di Neovim** (`i` / `n`)
-- 🗑️ **Hapus File dengan Konfirmasi** (`x` / `d`)
-- 📁 **Buat File / Folder dengan Mudah**
-- 📜 **Shortcut Help** (`?` untuk lihat semua keybinding)
-- 🎯 **Ringan, Cepat, Powerful** — cocok untuk terminal hacker
+1. Clone Repo
 
----
+git clone https://github.com/A-CodX/CodX-lf.git
 
-## 📦 Instalasi
+2. Pindahkan konfigurasi ke lokasi lf
 
-### 1. Clone Repo
-```bash
-git clone https://github.com/A-CodX/CodX-lf ~/.config/lf
+mkdir -p ~/.config/lf
+cp CodX-lf/lfrc ~/.config/lf/lfrc
 
-2. Pastikan lf telah terinstal
-
-pkg install lf
-
-3. Jalankan LF
+3. Jalankan lf
 
 lf
 
-> Konfigurasi otomatis terbaca dari ~/.config/lf/lfrc
-
-
-
 
 ---
 
-🎯 Shortcut Penting
+🎮 Navigasi & Shortcut
 
 Tombol	Fungsi
 
-h/l/j/k	Navigasi kiri/buka/bawah/atas
-gg / G	Lompat ke atas / bawah
-i / n	Edit file dengan Neovim
-y / c / p	Copy / Cut / Paste file
-x / d	Hapus file/folder (konfirmasi)
+h / l	Kembali folder / Masuk folder
+j / k	Turun / Naik
+gg / G	Ke paling atas / bawah
+H	Tampilkan/sembunyikan file hidden
+i	Edit file dengan Neovim
+n	Buka Neovim
+y / c / p	Copy / Cut / Paste
+x / d	Hapus file/folder (dengan konfirmasi)
 a / A	Buat file / folder
 r	Rename file
-q	Keluar dari LF
-R	Reload
-?	Tampilkan daftar shortcut
+q / R	Keluar / Reload ulang
+?	Lihat bantuan navigasi
 .	Toggle file tersembunyi
+V / u	Invert seleksi / Unselect
+ggVGd	(di Neovim) Hapus semua isi
+:wq	(di Neovim) Simpan dan keluar
 
 
 
 ---
 
-🗂️ Struktur File
+📎 Catatan
 
-.config/lf/
-├── lfrc
-└── README.md
+Shell default: zsh
 
+Sudah mendukung icon (gunakan font Nerd Font)
 
----
-
-📌 Catatan
-
-Shortcut ggVGd untuk delete semua isi file di Neovim
-
-Gunakan ESC :wq untuk simpan dan keluar dari Neovim
+Direkomendasikan terminal Termux + font monospace support icon
 
 
 
 ---
 
-🌐 GitHub
+🤝 Kontribusi
 
-🔗 Repo: github.com/A-CodX/CodX-lf
+Ingin menambahkan fitur, shortcut baru, atau perbaikan bug?
+Silakan kirim pull request ke repository ini.
 
 
 ---
 
-<p align="center"><b>⚡ Termux + Terminal = Superpower by A-CodX ⚡</b></p>
-```
----
+🧠 Kredit
+
+Dikembangkan oleh A-CodX
+Terinspirasi dari efisiensi workflow Neovim dan terminal power-user.
+
 
